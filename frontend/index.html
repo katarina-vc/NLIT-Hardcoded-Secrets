@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My Bad App</title>
+</head>
+<body>
+  <h1>Welcome to The Bad App</h1>
+  <div id="map" style="height:300px;"></div>
+
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=REPLACEMENTTEXT&callback=initMap"
+    async defer>
+  </script>
+  <script>
+    function initMap() {
+      new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 37.7749, lng: -122.4194 },
+        zoom: 12
+      });
+    }
+  </script>
+</body>
+</html>
