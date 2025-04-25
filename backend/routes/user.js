@@ -7,7 +7,8 @@ const users = [
     name: 'Alice Johnson',
     email: 'alice.johnson@example.com',
     ssn: '123-45-6789',              
-    phone: '+1-202-555-0143' 
+    phone: '+1-202-555-0143',
+    password: "password123"
   },
   {
     id: 2,
