@@ -1,12 +1,12 @@
 const sgMail = require('@sendgrid/mail');
 
-// Oops—forgot to pull from process.env
-sgMail.setApiKey('SG.x1X2x3X4x-ExAmPlE-sENdGrIdKey'); // ← SendGrid secret
+// Fetch SendGrid API key from environment variables
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 function sendWelcomeEmail(to, name) {
   const msg = {
     to,
-    from: 'noreply@mydummyapp.com',
+    from: SECUREMAILFROM,
     subject: 'Welcome!',
     html: `<p>Hi ${name}, thanks for signing up!</p>`
   };
